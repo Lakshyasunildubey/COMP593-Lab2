@@ -46,8 +46,20 @@ def print_movie_genres(data):
     return 
 
 # TODO: Step 8 - Function that prints comma-separated list of movie titles
-def print_movie_titles(movie_list):
+def print_movie_titles(movies):
+    titles = [movie["title"].title() for movie in movies]
+    title_str = ", ".join(titles)
+    print(f"Some of my favourite movies are {title_str}!")
     return
+print_student_profile(student_profile)
+print_pizza_toppings(student_profile)
+
+new_toppings = ("Onions","Sausage")
+add_pizza_toppings(student_profile, new_toppings)
+
+print_pizza_toppings(student_profile)
+print_movie_genres(student_profile)
+print_movie_titles(student_profile["movies"])
     
 if __name__ == '__main__':
     main()
